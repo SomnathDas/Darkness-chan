@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8" />
+  <title>Darkness-chan</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <script defer src="main.js"></script>
+  
+<style>
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  background-color: #222222;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+  </script>
+
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div class="form__group field">
+  <input type="input" maxlength="6" class="form__field" placeholder="nuke_Code" name="nuke_Code" id='nuke_Code' required />
+  <label for="nuke_Code" class="form__label">Enter Nuke Code</label>
+  <p style="color: #00ffcc" id="status">STATUS: Waiting for the code </p>
+  <p style="color: #00ffcc" id="doujin_Title" > </p>
+  <p style="color: #00ffcc" id="doujin_Pages" > </p>
+  <p style="color: #00ffcc" id="down_Count" > </p>
+  <div hidden class="loader" id="loading_Icon" style="display: none;"></div> 
+  <div>
+  <button id="nuke_Button" class="button is-primary" onclick="nyan()">
+      Convert
+  </button>
+  <button id="creditsBtn" class="button" onclick="go_to_Credits()">
+      Credits
+  </button>
+  <button id="Check" class="button" onclick="checkBtn()">
+      Check
+  </button>
+
+  <button id="stopBtn" class="button is-primary" onclick="stopBtn()">
+      Stop
+  </button>
+
+
+  </div>
+  
+</div>
+  
+  
+  
+  
+  
+
+</body>
+
+</html>
